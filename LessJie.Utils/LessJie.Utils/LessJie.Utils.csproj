@@ -49,6 +49,7 @@
     <Compile Include="Json\JsonConvert.cs" />
     <Compile Include="Json\JsonHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Xml\XmlHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Doc\A.docx" />

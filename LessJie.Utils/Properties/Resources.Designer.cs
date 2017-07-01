@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LessJie.Utils.Json.JsonClassGenerator.Properties {
+namespace LessJie.JsonUtils.JsonClassGenerator.Properties {
     using System;
     
     

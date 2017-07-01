@@ -7,7 +7,7 @@
     <ProjectGuid>{EA0CFB57-A16C-49B5-B12E-819FFEE36208}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LessJie.Utils</RootNamespace>
+    <RootNamespace>LessJie</RootNamespace>
     <AssemblyName>LessJie.Utils</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -35,10 +35,13 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,24 +51,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Json\JsonClassGenerator\CodeWriters\CSharpCodeWriter.cs" />
-    <Compile Include="Json\JsonClassGenerator\CodeWriters\JavaCodeWriter.cs" />
-    <Compile Include="Json\JsonClassGenerator\CodeWriters\TypeScriptCodeWriter.cs" />
-    <Compile Include="Json\JsonClassGenerator\CodeWriters\VisualBasicCodeWriter.cs" />
-    <Compile Include="Json\JsonClassGenerator\CodeWriterTypeEnum.cs" />
-    <Compile Include="Json\JsonClassGenerator\FieldInfo.cs" />
-    <Compile Include="Json\JsonClassGenerator\ICodeWriter.cs" />
-    <Compile Include="Json\JsonClassGenerator\IJsonClassGeneratorConfig.cs" />
-    <Compile Include="Json\JsonClassGenerator\JsonClassGenerator.cs" />
-    <None Include="Json\JsonClassGenerator\JsonClassHelper.cs" />
-    <Compile Include="Json\JsonClassGenerator\JsonType.cs" />
-    <Compile Include="Json\JsonClassGenerator\JsonTypeEnum.cs" />
-    <Compile Include="Json\JsonClassGenerator\VisibilityTypeEnum.cs" />
-    <Compile Include="Json\JsonConvert.cs" />
-    <Compile Include="Json\JsonHelper.cs" />
+    <Compile Include="ApiUtils\API.cs" />
+    <Compile Include="ApiUtils\Mac.cs" />
+    <Compile Include="ApiUtils\ResourcesApi.cs" />
+    <Compile Include="ApiUtils\Win32Private.cs" />
+    <Compile Include="ApiUtils\Win32Public.cs" />
+    <Compile Include="AppUtils\APPHelper.cs" />
+    <Compile Include="BarCodeUtils\BarCodeHelper.cs" />
+    <Compile Include="CacheUtils\CacheHelper.cs" />
+    <Compile Include="ConfigUtils\ConfigHelper.cs" />
+    <Compile Include="ControlUtils\ControlHelper.cs" />
+    <Compile Include="DataUtils\ConvertHelper.cs" />
+    <Compile Include="CookieUtils\CookieHelper.cs" />
+    <Compile Include="CSVUtils\CsvHelper.cs" />
+    <Compile Include="DataUtils\DataCreateHelper.cs" />
+    <Compile Include="DataUtils\DataOperateHelper.cs" />
+    <Compile Include="DownLoadUtils\FileDownHelper.cs" />
+    <Compile Include="FileUtils\DirFileHelper.cs" />
+    <Compile Include="FileUtils\FileOperateHelper.cs" />
+    <Compile Include="FileUtils\INIFileHelper.cs" />
+    <Compile Include="JsonUtils\JsonClassGenerator\CodeWriters\CSharpCodeWriter.cs" />
+    <Compile Include="JsonUtils\JsonClassGenerator\CodeWriters\JavaCodeWriter.cs" />
+    <Compile Include="JsonUtils\JsonClassGenerator\CodeWriters\TypeScriptCodeWriter.cs" />
+    <Compile Include="JsonUtils\JsonClassGenerator\CodeWriters\VisualBasicCodeWriter.cs" />
+    <Compile Include="JsonUtils\JsonClassGenerator\CodeWriterTypeEnum.cs" />
+    <Compile Include="JsonUtils\JsonClassGenerator\FieldInfo.cs" />
+    <Compile Include="JsonUtils\JsonClassGenerator\ICodeWriter.cs" />
+    <Compile Include="JsonUtils\JsonClassGenerator\IJsonClassGeneratorConfig.cs" />
+    <Compile Include="JsonUtils\JsonClassGenerator\JsonClassGenerator.cs" />
+    <Compile Include="PagingUtils\PagingHelper.cs" />
+    <Compile Include="ValidateUtils\DataValidate.cs" />
+    <Compile Include="XmlUtils\XmlOperate.cs" />
+    <None Include="JsonUtils\JsonClassGenerator\JsonClassHelper.cs" />
+    <Compile Include="JsonUtils\JsonClassGenerator\JsonType.cs" />
+    <Compile Include="JsonUtils\JsonClassGenerator\JsonTypeEnum.cs" />
+    <Compile Include="JsonUtils\JsonClassGenerator\VisibilityTypeEnum.cs" />
+    <Compile Include="JsonUtils\JsonConvert.cs" />
+    <Compile Include="JsonUtils\JsonHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs" />
-    <Compile Include="Xml\XmlHelper.cs" />
+    <Compile Include="XmlUtils\XmlHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Doc\A.docx" />
@@ -76,6 +101,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

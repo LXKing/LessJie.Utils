@@ -116,10 +116,9 @@ namespace LessJie.JsonUtils
         #endregion
 
 
-
-
+        #region Json生成Class
         /// <summary>
-        /// Json生成Class
+        /// Json生成Class 定义了输出流可以不设置输出文件夹
         /// </summary>
         /// <param name="jsonClassGenerator">JsonClassGenerator对象</param>
         public static void ClassGenerate(JsonClassGeneratorParams jsonClassGeneratorParams, CodeWriterTypeEnum codeWriterTypeEnum)
@@ -161,9 +160,9 @@ namespace LessJie.JsonUtils
             }
         }
 
-
-
-
+        /// <summary>
+        /// Json生成Class参数
+        /// </summary>
         public class JsonClassGeneratorParams
         {
             /// <summary>
@@ -231,6 +230,8 @@ namespace LessJie.JsonUtils
             /// </summary>
             public bool ExamplesInDocumentation { get; set; }
         }
+
+        #endregion
 
     }
 }

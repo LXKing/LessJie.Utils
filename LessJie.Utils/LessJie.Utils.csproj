@@ -109,6 +109,7 @@
     <Compile Include="JsonUtils\JsonClassGenerator\JsonClassGenerator.cs" />
     <Compile Include="JSUtils\JsHelper.cs" />
     <Compile Include="PagingUtils\PagingHelper.cs" />
+    <Compile Include="PreviewUtils\PreviewHelper.cs" />
     <Compile Include="RegexUtils\RegexHelper.cs" />
     <Compile Include="ToolsUtils\Tools.cs" />
     <Compile Include="UrlUtils\UrlOperate.cs" />

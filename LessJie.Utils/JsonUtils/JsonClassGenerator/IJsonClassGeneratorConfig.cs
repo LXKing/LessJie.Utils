@@ -18,7 +18,7 @@ namespace LessJie.JsonUtils.JsonClassGenerator
         bool UseNestedClasses { get; set; }
         bool ApplyObfuscationAttributes { get; set; }
         bool SingleFile { get; set; }
-        ICodeWriter CodeWriter { get; set; }
+        IJsonClassGeneratorCodeWriter CodeWriter { get; set; }
         bool HasSecondaryClasses { get; }
         bool AlwaysUseNullableValues { get; set; }
         bool UseNamespaces { get; }

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace LessJie.JsonUtils.JsonClassGenerator.CodeWriters
 {
-    public class CSharpCodeWriter : ICodeWriter
+    public class CSharpCodeWriter : IJsonClassGeneratorCodeWriter
     {
         public string FileExtension
         {

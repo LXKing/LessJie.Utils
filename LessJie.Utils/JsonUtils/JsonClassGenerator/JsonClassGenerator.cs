@@ -75,7 +75,7 @@ namespace LessJie.JsonUtils.JsonClassGenerator
         /// <summary>
         /// 生成代码类型
         /// </summary>
-        public ICodeWriter CodeWriter { get; set; }
+        public IJsonClassGeneratorCodeWriter CodeWriter { get; set; }
         /// <summary>
         /// 输出流
         /// </summary>

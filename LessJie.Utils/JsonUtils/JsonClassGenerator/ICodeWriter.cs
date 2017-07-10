@@ -6,7 +6,7 @@ using System.Text;
 
 namespace LessJie.JsonUtils.JsonClassGenerator
 {
-    public interface ICodeWriter
+    public interface IJsonClassGeneratorCodeWriter
     {
         string FileExtension { get; }
         string DisplayName { get; }

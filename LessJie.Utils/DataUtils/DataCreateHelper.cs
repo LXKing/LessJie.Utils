@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace LessJie.DataUtils
 {
+    /// <summary>
+    /// 数据生成帮助类
+    /// </summary>
     public class DataCreateHelper
     {
         //随机数对象
@@ -230,13 +233,63 @@ namespace LessJie.DataUtils
 
         #region 获取GUID值
         /// <summary>
-        /// 获取GUID值
+        /// 获取GUID值，不带参数 eg:9af7f46a-ea52-4aa3-b8c3-9fd484c2af12
         /// </summary>
         public static string GetNewGuid
         {
             get
             {
+                return Guid.NewGuid().ToString();
+            }
+        }
+        /// <summary>
+        /// 获取GUID值，带参数N eg:e0a953c3ee6040eaa9fae2b667060e09
+        /// </summary>
+        public static string GetNewGuidByN
+        {
+            get
+            {
                 return Guid.NewGuid().ToString("N");
+            }
+        }
+        /// <summary>
+        /// 获取GUID值，带参数D eg:9af7f46a-ea52-4aa3-b8c3-9fd484c2af12
+        /// </summary>
+        public static string GetNewGuidByD
+        {
+            get
+            {
+                return Guid.NewGuid().ToString("D");
+            }
+        }
+        /// <summary>
+        /// 获取GUID值，带参数B eg:{734fd453-a4f8-4c5d-9c98-3fe2d7079760}
+        /// </summary>
+        public static string GetNewGuidByB
+        {
+            get
+            {
+                return Guid.NewGuid().ToString("B");
+            }
+        }
+        /// <summary>
+        /// 获取GUID值，带参数P eg:(ade24d16-db0f-40af-8794-1e08e2040df3)
+        /// </summary>
+        public static string GetNewGuidByP
+        {
+            get
+            {
+                return Guid.NewGuid().ToString("P");
+            }
+        }
+        /// <summary>
+        /// 获取GUID值，带参数X eg:{0x3fa412e3,0x8356,0x428f,{0xaa,0x34,0xb7,0x40,0xda,0xaf,0x45,0x6f}}
+        /// </summary>
+        public static string GetNewGuidByX
+        {
+            get
+            {
+                return Guid.NewGuid().ToString("X");
             }
         }
         #endregion

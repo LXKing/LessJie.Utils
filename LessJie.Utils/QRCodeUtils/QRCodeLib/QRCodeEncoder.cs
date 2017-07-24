@@ -20,6 +20,9 @@ namespace ThoughtWorks.QRCode.Codec
         
         public enum ERROR_CORRECTION {L, M, Q, H};
 
+
+        public enum brushType { }
+
         //internal static String DATA_PATH = "qrcode_data";
         internal static String QRCODE_DATA_PATH = String.Empty;
 
@@ -1055,7 +1058,7 @@ namespace ThoughtWorks.QRCode.Codec
         }
 
 
-        public virtual Bitmap Encode(string content, System.Drawing.Color startColor, System.Drawing.Color endColor, int brushType)
+        public virtual Bitmap Encode(string content, System.Drawing.Color startColor, System.Drawing.Color endColor, LinearGradientMode brushType)
         {
             bool flag = QRCodeUtility.IsUniCode(content);
             Bitmap result;
@@ -1072,32 +1075,36 @@ namespace ThoughtWorks.QRCode.Codec
 
 
         // LXKing.QRCode.Codec.QRCodeEncoder
-        public virtual Bitmap Encode(string content, Encoding encoding, Color startColor, Color endColor, int brushType)
+        public virtual Bitmap Encode(string content, Encoding encoding, Color startColor, Color endColor, LinearGradientMode brushType)
         {
             bool[][] array = this.calQrcode(encoding.GetBytes(content));
             Bitmap bitmap = new Bitmap(array.Length * this.qrCodeScale + 1, array.Length * this.qrCodeScale + 1);
             Graphics graphics = Graphics.FromImage(bitmap);
             LinearGradientBrush brush = null;
-            bool flag = brushType == 1;
-            if (flag)
-            {
-                brush = new LinearGradientBrush(new Rectangle(0, 0, bitmap.Width, bitmap.Height), startColor, endColor, LinearGradientMode.BackwardDiagonal);
-            }
-            bool flag2 = brushType == 2;
-            if (flag2)
-            {
-                brush = new LinearGradientBrush(new Rectangle(0, 0, bitmap.Width, bitmap.Height), startColor, endColor, LinearGradientMode.ForwardDiagonal);
-            }
-            bool flag3 = brushType == 3;
-            if (flag3)
-            {
-                brush = new LinearGradientBrush(new Rectangle(0, 0, bitmap.Width, bitmap.Height), startColor, endColor, LinearGradientMode.Horizontal);
-            }
-            bool flag4 = brushType == 4;
-            if (flag4)
-            {
-                brush = new LinearGradientBrush(new Rectangle(0, 0, bitmap.Width, bitmap.Height), startColor, endColor, LinearGradientMode.Vertical);
-            }
+
+            //bool flag = brushType == 1;
+            //if (flag)
+            //{
+            //    brush = new LinearGradientBrush(new Rectangle(0, 0, bitmap.Width, bitmap.Height), startColor, endColor, LinearGradientMode.BackwardDiagonal);
+            //}
+            //bool flag2 = brushType == 2;
+            //if (flag2)
+            //{
+            //    brush = new LinearGradientBrush(new Rectangle(0, 0, bitmap.Width, bitmap.Height), startColor, endColor, LinearGradientMode.ForwardDiagonal);
+            //}
+            //bool flag3 = brushType == 3;
+            //if (flag3)
+            //{
+            //    brush = new LinearGradientBrush(new Rectangle(0, 0, bitmap.Width, bitmap.Height), startColor, endColor, LinearGradientMode.Horizontal);
+            //}
+            //bool flag4 = brushType == 4;
+            //if (flag4)
+            //{
+            //    brush = new LinearGradientBrush(new Rectangle(0, 0, bitmap.Width, bitmap.Height), startColor, endColor, LinearGradientMode.Vertical);
+            //}
+
+            brush = new LinearGradientBrush(new Rectangle(0, 0, bitmap.Width, bitmap.Height), startColor, endColor, brushType);
+
             int num;
             for (int i = 0; i < array.Length; i = num + 1)
             {
